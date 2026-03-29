@@ -1,6 +1,6 @@
-# coq-of-python
+# rocq-of-python
 
-> Translate Python code to Coq code
+> Translate Python code to Rocq (Coq) code
 
 ```python
 input = "🐍"
@@ -12,11 +12,11 @@ print("🐓")
 
 We focus on translating the Ethereum specification, which is written in Python: https://github.com/ethereum/execution-specs The output of the translation is in [CoqOfPython/ethereum](CoqOfPython/ethereum).
 
-The generated Coq code type checks, with some holes for expressions we do not handle yet. We are now working on adding a semantics to be able to specify at least one file.
+The generated Rocq code type checks, with some holes for expressions we do not handle yet. We are now working on adding a semantics to be able to specify at least one file.
 
 ## Run
 
-### Translate Python to Coq
+### Translate Python to Rocq
 
 Clone this repository and run:
 
@@ -30,9 +30,9 @@ as there are sub-modules. Then go in the `ethereum-execution-specs/src` folder a
 find ethereum -name "*.py" -print0 | xargs -0 -n 1 python ../../main.py
 ```
 
-This will translate each file of the Ethereum specification to Coq and put the result in the `CoqOfPython/ethereum` folder.
+This will translate each file of the Ethereum specification to Rocq and put the result in the `CoqOfPython/ethereum` folder.
 
-### Compile the Coq
+### Compile the Rocq
 
 Go into the `CoqOfPython` folder and install the dependencies with [opam](https://opam.ocaml.org/):
 
